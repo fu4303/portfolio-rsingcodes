@@ -91,11 +91,6 @@ export default function Container(props) {
           <NextLink href="/about">
             <a className="p-1 text-gray-900 sm:p-4 dark:text-gray-100">About</a>
           </NextLink>
-          <NextLink href="/contact">
-            <a className="p-1 text-gray-900 sm:p-4 dark:text-gray-100">
-              Contact
-            </a>
-          </NextLink>
         </div>
       </nav>
       <main
