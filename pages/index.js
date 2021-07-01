@@ -29,8 +29,8 @@ export default function Home() {
           Blog Posts ☕
         </h3>
         <BlogPost
-          title="Everything I Know About Style Guides, Design Systems, and Component Libraries"
-          publishDate="June 27, 2021"
+          title="8 JavaScript hacks you should know as front-end or full stack developer."
+          publishDate="June 30, 2021"
           readTime="5 min read"
           slug="style-guides-component-libraries-design-systems"
         />

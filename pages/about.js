@@ -1,50 +1,15 @@
 import Container from "@/components/Container";
+import ProjectCard from "@/components/ProjectCard";
 
-const Step = ({ children }) => {
+const HeadTitle = ({ marginBottom, children }) => {
   return (
-    <li className="flex text-gray-900 dark:text-gray-100 mb-2">
-      •<p className="text-gray-700 dark:text-gray-400 ml-6">{children}</p>
-    </li>
+    <h2
+      className={`font-bold text-3xl tracking-tight ${marginBottom} text-black dark:text-white`}
+    >
+      {children}
+    </h2>
   );
 };
-
-const ProjectCard = ({ title, link, children }) => (
-  <>
-    <h3 className="font-medium mb-2 text-lg">
-      <a
-        className="flex items-center text-gray-900 dark:text-gray-100"
-        target="_blank"
-        rel="noopener noreferrer"
-        href={link}
-      >
-        {title}
-        <div>
-          <svg
-            className="h-4 w-4 ml-1"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
-        </div>
-      </a>
-    </h3>
-    <p className="text-gray-600 dark:text-gray-400 mb-8">{children}</p>
-  </>
-);
-
-const HeadTitle = ({ children }) => (
-  <h2 className="font-bold text-3xl tracking-tight mb-4 text-black dark:text-white">
-    {children}
-  </h2>
-);
 
 export default function About() {
   return (
@@ -53,32 +18,30 @@ export default function About() {
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-4 text-black dark:text-white">
           About Me
         </h1>
-        <div className="leading-6 text-gray-600 dark:text-gray-400 mt-5 mb-8">
-          <p className="mb-4">Hey, I’m Raghvendra Singh. </p>
-          <ul>
-            <Step>Undergraduate in Information Technology, Batch of '22.</Step>
-            <Step>
-              Self taught front-end software developer who has extensive
-              background in various coding languages, developing web
-              applications, and building websites from the ground up.
-            </Step>
-            <Step>Passionate about traveling and learning new things!</Step>
-            <Step>
-              How people know{" "}
-              <a
-                className="text-blue-500"
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://twitter.com/rsinghcodes"
-              >
-                me
-              </a>
-              .
-            </Step>
-            <Step>Time Zone: Indian Standard Time (GMT+5:30)</Step>
-          </ul>
+        <div className="mb-8 prose leading-6 text-gray-600 dark:text-gray-400">
+          <p>
+            Hey, I’m Raghvendra undergraduate in <b>Information Technology</b>,
+            batch of '22.
+          </p>
+          <p>
+            <b>Self taught</b> front-end software developer who has extensive
+            background in various coding languages, developing web applications,
+            and building websites from the ground up.
+          </p>
+          <p>
+            I know my ways on back-end but what I really like doing the most is
+            Front-end work. Ideally, I love working on all stages of building a
+            web apps - from the first design, implementation to the finished
+            product. Currently, my main area of focus has been Javascript and
+            thier frameworks/libraries.
+          </p>
+          <p>
+            Beside that, I'm passionate about traveling and learning new things
+            that is constantly expanding with new and interesting topics.
+          </p>
+          <p>Time Zone: Indian Standard Time (GMT+5:30)</p>
         </div>
-        <HeadTitle>Stuff I've built in past</HeadTitle>
+        <HeadTitle marginBottom="mb-4">Stuff I've built in past</HeadTitle>
         <ProjectCard
           title="Hulu Clone"
           link="https://hulu-yt-clone.vercel.app/"
@@ -88,7 +51,7 @@ export default function About() {
         </ProjectCard>
         <ProjectCard title="MyMart" link="https://mymartstore.netlify.app/">
           MyMart is an online mini-mart, responsive e-commerce web app built
-          using React.js, Material-UI, Redux and Firebase.
+          using React.js, Styled-components, Material-UI, Redux and Firebase.
         </ProjectCard>
         <ProjectCard
           title="Github profiles"
@@ -106,17 +69,20 @@ export default function About() {
           Bootstrap and vanilla JavaScript.
         </ProjectCard>
         <HeadTitle>Experience</HeadTitle>
-        <ul className="mb-8">
-          <Step>HTML5 / CSS3</Step>
-          <Step>SASS, Material UI, and Tailwind CSS</Step>
-          <Step>JavaScript (ES5, ES6+)</Step>
-          <Step>ReactJS, Redux</Step>
-          <Step>Next.js</Step>
-          <Step>Firebase</Step>
-          <Step>C++ / Python / Java (Basics)</Step>
-          <Step>Figma (UI/UX tools)</Step>
-        </ul>
-        <HeadTitle>Footnote</HeadTitle>
+        <div className="prose dark:prose-dark max-w-none w-full">
+          <ul>
+            <li>HTML5 / CSS3</li>
+            <li>Bootstrap and SASS</li>
+            <li>Styled-components, Material UI, and Tailwind CSS</li>
+            <li>JavaScript (ES5, ES6+)</li>
+            <li>ReactJS, Redux and Next.js</li>
+            <li>Git (Version Control)</li>
+            <li>Firebase</li>
+            <li>C++ / Python / Java (Basics)</li>
+            <li>Figma (UI/UX tool)</li>
+          </ul>
+        </div>
+        <HeadTitle marginBottom="mb-4">Footnote</HeadTitle>
         <p className="prose text-gray-600 dark:text-gray-400">
           This site is built using{" "}
           <a
@@ -126,15 +92,7 @@ export default function About() {
           >
             Next.js
           </a>{" "}
-          and{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://tailwindcss.com/"
-          >
-            Tailwind CSS
-          </a>
-          . Thank you for visting : )
+          and Tailwind CSS. Thank you for visting : )
         </p>
       </div>
     </Container>

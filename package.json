@@ -1,7 +1,12 @@
 {
   "name": "raghvendra",
+  "description": "My personal website.",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Raghvendra Singh",
+    "url": "https://rsinghcodes.vercel.app"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -15,6 +20,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
+    "reading-time": "^1.3.0",
     "swr": "^0.5.6"
   },
   "devDependencies": {
@@ -23,5 +29,10 @@
     "eslint-config-next": "11.0.1",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "tabWidth": 2,
+    "trailingComma": "none"
   }
 }

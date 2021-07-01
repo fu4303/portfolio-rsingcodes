@@ -1,5 +1,5 @@
 import Head from "next/head";
-// import { useRouter } from "next/router";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
@@ -14,13 +14,13 @@ export default function Container(props) {
   useEffect(() => setMounted(true), []);
 
   const { children, ...customMeta } = props;
-  // const router = useRouter();
+  const router = useRouter();
   const meta = {
     title: "Raghvendra Singh – Front-end Developer and writer.",
     description: `Front-end developer, JavaScript enthusiast, and blog writer.`,
-    // image: "https://leerob.io/static/images/banner.png",
+    // image: "https://rsinghcodes.vercel.app/static/images/banner.png",
     type: "website",
-    ...customMeta,
+    ...customMeta
   };
 
   return (
@@ -29,8 +29,14 @@ export default function Container(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        {/* <meta property="og:url" content={`https://leerob.io${router.asPath}`} /> */}
-        {/* <link rel="canonical" href={`https://leerob.io${router.asPath}`} /> */}
+        <meta
+          property="og:url"
+          content={`https://rsinghcodes.vercel.app${router.asPath}`}
+        />
+        <link
+          rel="canonical"
+          href={`https://rsinghcodes.vercel.app${router.asPath}`}
+        />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Raghvendra Singh" />
         <meta property="og:description" content={meta.description} />

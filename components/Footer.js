@@ -27,7 +27,7 @@ export default function Footer() {
           <ExternalLink href="https://www.linkedin.com/in/rsingh428">
             <FiLinkedin />
           </ExternalLink>
-          <ExternalLink href="mailto:raghvendrapratap.success@gmail.com">
+          <ExternalLink href="mailto:raghvendrasingh.success02@gmail.com">
             <FiMail />
           </ExternalLink>
         </div>
